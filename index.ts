@@ -2,7 +2,7 @@ import postcss from "postcss";
 
 const noop = () => {};
 
-export default postcss.plugin("postcss-nodegui-prefix", () => {
+export default postcss.plugin("postcss-nodegui-autoprefixer", () => {
   return root => {
     root.walkDecls(decl => {
       const autoPrefixer = getAutoPrefixerForProp(decl.prop);

@@ -1,5 +1,5 @@
 {
-  "name": "postcss-nodegui-prefix",
+  "name": "postcss-nodegui-autoprefixer",
   "version": "0.0.1",
   "description": "PostCSS plugin A css auto prefixer for nodegui",
   "main": "dist/index.js",
@@ -20,11 +20,11 @@
   },
   "author": "Atul R <atulanand94@gmail.com>",
   "license": "MIT",
-  "repository": "master-atul/postcss-nodegui-prefix",
+  "repository": "master-atul/postcss-nodegui-autoprefixer",
   "bugs": {
-    "url": "https://github.com/master-atul/postcss-nodegui-prefix/issues"
+    "url": "https://github.com/master-atul/postcss-nodegui-autoprefixer/issues"
   },
-  "homepage": "https://github.com/master-atul/postcss-nodegui-prefix",
+  "homepage": "https://github.com/master-atul/postcss-nodegui-autoprefixer",
   "dependencies": {
     "postcss": "^7.0.17"
   },
