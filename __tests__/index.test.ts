@@ -28,7 +28,7 @@ it("autoprefix nodegui css", function() {
     #resultText {
       qproperty-flex: 1;
       qproperty-alignment: 'AlignRight|AlignVCenter';
-      padding-right: 5px;
+      qproperty-paddingRight: 5px;
       font-size: 40px;
     }
     #row0 {
@@ -53,7 +53,7 @@ it("autoprefix inline nodegui css", function() {
     `
       qproperty-flex: 1;
       qproperty-alignment: 'AlignRight|AlignVCenter';
-      padding-right: 5px;
+      qproperty-paddingRight: 5px;
       font-size: 40px;
   `,
     {}
