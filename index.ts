@@ -41,7 +41,7 @@ const getAutoPrefixerForProp = (propName: string) => {
       decl.prop = "qproperty-overflow";
     },
     position: decl => {
-      decl.prop = "qproperty-position";
+      decl.cloneBefore({ prop: "qproperty-position" });
     },
     "flex-wrap": decl => {
       decl.prop = "qproperty-flexWrap";
@@ -59,100 +59,145 @@ const getAutoPrefixerForProp = (propName: string) => {
       decl.prop = "qproperty-aspectRatio";
     },
     top: decl => {
-      decl.prop = "qproperty-top";
+      decl.cloneBefore({ prop: "qproperty-top" });
     },
     right: decl => {
-      decl.prop = "qproperty-right";
+      decl.cloneBefore({ prop: "qproperty-right" });
     },
     bottom: decl => {
-      decl.prop = "qproperty-bottom";
+      decl.cloneBefore({ prop: "qproperty-bottom" });
     },
     left: decl => {
-      decl.prop = "qproperty-left";
+      decl.cloneBefore({ prop: "qproperty-left" });
     },
     "flex-basis": decl => {
       decl.prop = "qproperty-flexBasis";
     },
     "min-width": decl => {
-      decl.prop = "qproperty-minWidth";
+      decl.cloneBefore({ prop: "qproperty-minWidth" });
     },
     "min-height": decl => {
-      decl.prop = "qproperty-minHeight";
+      decl.cloneBefore({ prop: "qproperty-minHeight" });
     },
     width: decl => {
-      decl.prop = "qproperty-qWidth";
+      decl.cloneBefore({ prop: "qproperty-qWidth" });
     },
     height: decl => {
-      decl.prop = "qproperty-qHeight";
+      decl.cloneBefore({ prop: "qproperty-qHeight" });
     },
     "max-width": decl => {
-      decl.prop = "qproperty-maxWidth";
+      decl.cloneBefore({ prop: "qproperty-maxWidth" });
     },
     "max-height": decl => {
-      decl.prop = "qproperty-maxHeight";
+      decl.cloneBefore({ prop: "qproperty-maxHeight" });
     },
     "padding-top": decl => {
-      decl.prop = "qproperty-paddingTop";
+      decl.cloneBefore({ prop: "qproperty-paddingTop" });
     },
     "padding-right": decl => {
-      decl.prop = "qproperty-paddingRight";
+      decl.cloneBefore({ prop: "qproperty-paddingRight" });
     },
     "padding-bottom": decl => {
-      decl.prop = "qproperty-paddingBottom";
+      decl.cloneBefore({ prop: "qproperty-paddingBottom" });
     },
     "padding-left": decl => {
-      decl.prop = "qproperty-paddingLeft";
+      decl.cloneBefore({ prop: "qproperty-paddingLeft" });
     },
     "padding-horizontal": decl => {
-      decl.prop = "qproperty-paddingHorizontal";
+      decl.cloneBefore({ prop: "qproperty-paddingHorizontal" });
+      decl.cloneBefore({ prop: "padding-right" });
+      decl.cloneBefore({ prop: "padding-left" });
+      decl.remove();
     },
     "padding-vertical": decl => {
-      decl.prop = "qproperty-paddingVertical";
+      decl.cloneBefore({ prop: "qproperty-paddingVertical" });
+      decl.cloneBefore({ prop: "padding-bottom" });
+      decl.cloneBefore({ prop: "padding-top" });
+      decl.remove();
     },
     padding: decl => {
-      decl.prop = "qproperty-padding";
+      decl.cloneBefore({ prop: "qproperty-padding" });
     },
     "margin-top": decl => {
-      decl.prop = "qproperty-marginTop";
+      decl.cloneBefore({ prop: "qproperty-marginTop" });
     },
     "margin-right": decl => {
-      decl.prop = "qproperty-marginRight";
+      decl.cloneBefore({ prop: "qproperty-marginRight" });
     },
     "margin-bottom": decl => {
-      decl.prop = "qproperty-marginBottom";
+      decl.cloneBefore({ prop: "qproperty-marginBottom" });
     },
     "margin-left": decl => {
-      decl.prop = "qproperty-marginLeft";
+      decl.cloneBefore({ prop: "qproperty-marginLeft" });
     },
     "margin-horizontal": decl => {
-      decl.prop = "qproperty-marginHorizontal";
+      decl.cloneBefore({ prop: "qproperty-marginHorizontal" });
+      decl.cloneBefore({ prop: "margin-right" });
+      decl.cloneBefore({ prop: "margin-left" });
+      decl.remove();
     },
     "margin-vertical": decl => {
-      decl.prop = "qproperty-marginVertical";
+      decl.cloneBefore({ prop: "qproperty-marginVertical" });
+      decl.cloneBefore({ prop: "margin-bottom" });
+      decl.cloneBefore({ prop: "margin-top" });
+      decl.remove();
     },
     margin: decl => {
-      decl.prop = "qproperty-margin";
+      decl.cloneBefore({ prop: "qproperty-margin" });
     },
-    "boder-top": decl => {
-      decl.prop = "qproperty-borderTop";
+    "border-top": decl => {
+      decl.cloneBefore({ prop: "qproperty-borderTop" });
     },
     "border-right": decl => {
-      decl.prop = "qproperty-borderRight";
+      decl.cloneBefore({ prop: "qproperty-borderRight" });
     },
     "border-bottom": decl => {
-      decl.prop = "qproperty-borderBottom";
+      decl.cloneBefore({ prop: "qproperty-borderBottom" });
     },
     "border-left": decl => {
-      decl.prop = "qproperty-borderLeft";
+      decl.cloneBefore({ prop: "qproperty-borderLeft" });
     },
     "border-horizontal": decl => {
-      decl.prop = "qproperty-borderHorizontal";
+      decl.cloneBefore({ prop: "qproperty-borderHorizontal" });
+      decl.cloneBefore({ prop: "border-right" });
+      decl.cloneBefore({ prop: "border-left" });
+      decl.remove();
     },
     "border-vertical": decl => {
-      decl.prop = "qproperty-borderVertical";
+      decl.cloneBefore({ prop: "qproperty-borderVertical" });
+      decl.cloneBefore({ prop: "border-bottom" });
+      decl.cloneBefore({ prop: "border-top" });
+      decl.remove();
     },
     border: decl => {
-      decl.prop = "qproperty-border";
+      decl.cloneBefore({ prop: "qproperty-border" });
+    },
+    "border-top-width": decl => {
+      decl.cloneBefore({ prop: "qproperty-borderTop" });
+    },
+    "border-right-width": decl => {
+      decl.cloneBefore({ prop: "qproperty-borderRight" });
+    },
+    "border-bottom-width": decl => {
+      decl.cloneBefore({ prop: "qproperty-borderBottom" });
+    },
+    "border-left-width": decl => {
+      decl.cloneBefore({ prop: "qproperty-borderLeft" });
+    },
+    "border-horizontal-width": decl => {
+      decl.cloneBefore({ prop: "qproperty-borderHorizontal" });
+      decl.cloneBefore({ prop: "border-right" });
+      decl.cloneBefore({ prop: "border-left" });
+      decl.remove();
+    },
+    "border-vertical-width": decl => {
+      decl.cloneBefore({ prop: "qproperty-borderVertical" });
+      decl.cloneBefore({ prop: "border-bottom" });
+      decl.cloneBefore({ prop: "border-top" });
+      decl.remove();
+    },
+    "border-width": decl => {
+      decl.cloneBefore({ prop: "qproperty-border" });
     }
   };
   return rules[propName] || noop;
