@@ -1,6 +1,6 @@
 {
   "name": "postcss-nodegui-autoprefixer",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "PostCSS plugin A css auto prefixer for nodegui",
   "main": "dist/index.js",
   "files": [
@@ -16,7 +16,8 @@
     "nodegui"
   ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
   "author": "Atul R <atulanand94@gmail.com>",
   "license": "MIT",
