@@ -126,34 +126,34 @@ it("borders", function() {
       border-vertical-width: 16px;
     `,
     `
-      qproperty-borderTop: 10px;
+      qproperty-borderTop: 10;
       border-top: 10px;
-      qproperty-borderRight: 11px;
+      qproperty-borderRight: 11;
       border-right: 11px;
-      qproperty-borderBottom: 12px;
+      qproperty-borderBottom: 12;
       border-bottom: 12px;
-      qproperty-borderLeft: 13px;
+      qproperty-borderLeft: 13;
       border-left: 13px;
-      qproperty-borderHorizontal: 14px;
+      qproperty-borderHorizontal: 14;
       border-right: 14px;
       border-left: 14px;
-      qproperty-borderVertical: 15px;
+      qproperty-borderVertical: 15;
       border-bottom: 15px;
       border-top: 15px;
-      qproperty-border: 10px;
+      qproperty-border: 10;
       border-width: 10px;
-      qproperty-borderTop: 11px;
+      qproperty-borderTop: 11;
       border-top-width: 11px;
-      qproperty-borderRight: 12px;
+      qproperty-borderRight: 12;
       border-right-width: 12px;
-      qproperty-borderBottom: 13px;
+      qproperty-borderBottom: 13;
       border-bottom-width: 13px;
-      qproperty-borderRight: 14px;
+      qproperty-borderRight: 14;
       border-right-width: 14px;
-      qproperty-borderHorizontal: 15px;
+      qproperty-borderHorizontal: 15;
       border-right: 15px;
       border-left: 15px;
-      qproperty-borderVertical: 16px;
+      qproperty-borderVertical: 16;
       border-bottom: 16px;
       border-top: 16px;
     `,

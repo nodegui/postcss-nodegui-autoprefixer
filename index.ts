@@ -146,58 +146,100 @@ const getAutoPrefixerForProp = (propName: string) => {
       decl.cloneBefore({ prop: "qproperty-margin" });
     },
     "border-top": decl => {
-      decl.cloneBefore({ prop: "qproperty-borderTop" });
+      decl.cloneBefore({
+        prop: "qproperty-borderTop",
+        value: parseInt(`${decl.value}`)
+      });
     },
     "border-right": decl => {
-      decl.cloneBefore({ prop: "qproperty-borderRight" });
+      decl.cloneBefore({
+        prop: "qproperty-borderRight",
+        value: parseInt(`${decl.value}`)
+      });
     },
     "border-bottom": decl => {
-      decl.cloneBefore({ prop: "qproperty-borderBottom" });
+      decl.cloneBefore({
+        prop: "qproperty-borderBottom",
+        value: parseInt(`${decl.value}`)
+      });
     },
     "border-left": decl => {
-      decl.cloneBefore({ prop: "qproperty-borderLeft" });
+      decl.cloneBefore({
+        prop: "qproperty-borderLeft",
+        value: parseInt(`${decl.value}`)
+      });
     },
     "border-horizontal": decl => {
-      decl.cloneBefore({ prop: "qproperty-borderHorizontal" });
+      decl.cloneBefore({
+        prop: "qproperty-borderHorizontal",
+        value: parseInt(`${decl.value}`)
+      });
       decl.cloneBefore({ prop: "border-right" });
       decl.cloneBefore({ prop: "border-left" });
       decl.remove();
     },
     "border-vertical": decl => {
-      decl.cloneBefore({ prop: "qproperty-borderVertical" });
+      decl.cloneBefore({
+        prop: "qproperty-borderVertical",
+        value: parseInt(`${decl.value}`)
+      });
       decl.cloneBefore({ prop: "border-bottom" });
       decl.cloneBefore({ prop: "border-top" });
       decl.remove();
     },
     border: decl => {
-      decl.cloneBefore({ prop: "qproperty-border" });
+      decl.cloneBefore({
+        prop: "qproperty-border",
+        value: parseInt(`${decl.value}`)
+      });
     },
     "border-top-width": decl => {
-      decl.cloneBefore({ prop: "qproperty-borderTop" });
+      decl.cloneBefore({
+        prop: "qproperty-borderTop",
+        value: parseInt(`${decl.value}`)
+      });
     },
     "border-right-width": decl => {
-      decl.cloneBefore({ prop: "qproperty-borderRight" });
+      decl.cloneBefore({
+        prop: "qproperty-borderRight",
+        value: parseInt(`${decl.value}`)
+      });
     },
     "border-bottom-width": decl => {
-      decl.cloneBefore({ prop: "qproperty-borderBottom" });
+      decl.cloneBefore({
+        prop: "qproperty-borderBottom",
+        value: parseInt(`${decl.value}`)
+      });
     },
     "border-left-width": decl => {
-      decl.cloneBefore({ prop: "qproperty-borderLeft" });
+      decl.cloneBefore({
+        prop: "qproperty-borderLeft",
+        value: parseInt(`${decl.value}`)
+      });
     },
     "border-horizontal-width": decl => {
-      decl.cloneBefore({ prop: "qproperty-borderHorizontal" });
+      decl.cloneBefore({
+        prop: "qproperty-borderHorizontal",
+        value: parseInt(`${decl.value}`)
+      });
       decl.cloneBefore({ prop: "border-right" });
       decl.cloneBefore({ prop: "border-left" });
       decl.remove();
     },
     "border-vertical-width": decl => {
-      decl.cloneBefore({ prop: "qproperty-borderVertical" });
+      decl.cloneBefore({
+        prop: "qproperty-borderVertical",
+        value: parseInt(`${decl.value}`)
+      });
       decl.cloneBefore({ prop: "border-bottom" });
       decl.cloneBefore({ prop: "border-top" });
       decl.remove();
     },
     "border-width": decl => {
-      decl.cloneBefore({ prop: "qproperty-border" });
+      decl.cloneBefore({
+        prop: "qproperty-border",
+        value: parseInt(`${decl.value}`)
+      });
     }
   };
   return rules[propName] || noop;
