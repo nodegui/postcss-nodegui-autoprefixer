@@ -2,14 +2,17 @@ import postcss from "postcss";
 
 const noop = () => {};
 
-export default postcss.plugin("postcss-nodegui-autoprefixer", () => {
-  return root => {
-    root.walkDecls(decl => {
-      const autoPrefixer = getAutoPrefixerForProp(decl.prop);
-      autoPrefixer(decl);
-    });
-  };
-});
+export const autoprefixer = postcss.plugin(
+  "postcss-nodegui-autoprefixer",
+  () => {
+    return root => {
+      root.walkDecls(decl => {
+        const autoPrefixer = getAutoPrefixerForProp(decl.prop);
+        autoPrefixer(decl);
+      });
+    };
+  }
+);
 
 const getAutoPrefixerForProp = (propName: string) => {
   const rules: Rules = {
@@ -158,3 +161,5 @@ const getAutoPrefixerForProp = (propName: string) => {
 type Rules = {
   [key: string]: (decl: postcss.Declaration) => void;
 };
+
+export default autoprefixer;
