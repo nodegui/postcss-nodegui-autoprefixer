@@ -15,7 +15,7 @@ it("autoprefix nodegui css", function() {
     `
     #resultText {
       flex: 1;
-      qproperty-alignment: 'AlignRight|AlignVCenter';
+      qproperty-yAlignment: 'AlignRight|AlignVCenter';
       font-size: 40px;
     }
     #row0 {
@@ -27,15 +27,15 @@ it("autoprefix nodegui css", function() {
   `,
     `
     #resultText {
-      qproperty-flex: 1;
-      qproperty-alignment: 'AlignRight|AlignVCenter';
+      qproperty-yFlex: 1;
+      qproperty-yAlignment: 'AlignRight|AlignVCenter';
       font-size: 40px;
     }
     #row0 {
-      qproperty-flex: 1;
-      qproperty-alignItems: stretch;
-      qproperty-justifyContent: space-between;
-      qproperty-flexDirection: row;
+      qproperty-yFlex: 1;
+      qproperty-yAlignItems: stretch;
+      qproperty-yJustifyContent: space-between;
+      qproperty-yFlexDirection: row;
     }
   `,
     {}
@@ -46,12 +46,12 @@ it("autoprefix inline nodegui css", function() {
   return run(
     `
       flex: 1;
-      qproperty-alignment: 'AlignRight|AlignVCenter';
+      qproperty-yAlignment: 'AlignRight|AlignVCenter';
       font-size: 40px;
   `,
     `
-      qproperty-flex: 1;
-      qproperty-alignment: 'AlignRight|AlignVCenter';
+      qproperty-yFlex: 1;
+      qproperty-yAlignment: 'AlignRight|AlignVCenter';
       font-size: 40px;
   `,
     {}
@@ -69,17 +69,17 @@ it("height, width, max-height, max-width, min-height, min-width", function() {
       min-width: 14px;
     `,
     `
-      qproperty-qHeight: 12px;
+      qproperty-yHeight: 12px;
       height: 12px;
-      qproperty-qWidth: 12px;
+      qproperty-yWidth: 12px;
       width: 12px;
-      qproperty-maxHeight:13px;
+      qproperty-yMaxHeight:13px;
       max-height:13px;
-      qproperty-maxWidth: 13px;
+      qproperty-yMaxWidth: 13px;
       max-width: 13px;
-      qproperty-minHeight: 14px;
+      qproperty-yMinHeight: 14px;
       min-height: 14px;
-      qproperty-minWidth: 14px;
+      qproperty-yMinWidth: 14px;
       min-width: 14px;
     `,
     {}
@@ -95,13 +95,13 @@ it("left,top,bottom,right", function() {
       right: 12px;
     `,
     `
-      qproperty-top: 12px;
+      qproperty-yTop: 12px;
       top: 12px;
-      qproperty-left: 12px;
+      qproperty-yLeft: 12px;
       left: 12px;
-      qproperty-bottom: 12px;
+      qproperty-yBottom: 12px;
       bottom: 12px;
-      qproperty-right: 12px;
+      qproperty-yRight: 12px;
       right: 12px;
     `,
     {}
@@ -126,34 +126,34 @@ it("borders", function() {
       border-vertical-width: 16px;
     `,
     `
-      qproperty-borderTop: 10;
+      qproperty-yBorderTop: 10;
       border-top: 10px;
-      qproperty-borderRight: 11;
+      qproperty-yBorderRight: 11;
       border-right: 11px;
-      qproperty-borderBottom: 12;
+      qproperty-yBorderBottom: 12;
       border-bottom: 12px;
-      qproperty-borderLeft: 13;
+      qproperty-yBorderLeft: 13;
       border-left: 13px;
-      qproperty-borderHorizontal: 14;
+      qproperty-yBorderHorizontal: 14;
       border-right: 14px;
       border-left: 14px;
-      qproperty-borderVertical: 15;
+      qproperty-yBorderVertical: 15;
       border-bottom: 15px;
       border-top: 15px;
-      qproperty-border: 10;
+      qproperty-yBorder: 10;
       border-width: 10px;
-      qproperty-borderTop: 11;
+      qproperty-yBorderTop: 11;
       border-top-width: 11px;
-      qproperty-borderRight: 12;
+      qproperty-yBorderRight: 12;
       border-right-width: 12px;
-      qproperty-borderBottom: 13;
+      qproperty-yBorderBottom: 13;
       border-bottom-width: 13px;
-      qproperty-borderRight: 14;
+      qproperty-yBorderRight: 14;
       border-right-width: 14px;
-      qproperty-borderHorizontal: 15;
+      qproperty-yBorderHorizontal: 15;
       border-right: 15px;
       border-left: 15px;
-      qproperty-borderVertical: 16;
+      qproperty-yBorderVertical: 16;
       border-bottom: 16px;
       border-top: 16px;
     `,
@@ -172,18 +172,18 @@ it("margins", function() {
       margin-vertical: 15px;
     `,
     `
-      qproperty-marginTop: 10px;
+      qproperty-yMarginTop: 10px;
       margin-top: 10px;
-      qproperty-marginRight: 11px;
+      qproperty-yMarginRight: 11px;
       margin-right: 11px;
-      qproperty-marginBottom: 12px;
+      qproperty-yMarginBottom: 12px;
       margin-bottom: 12px;
-      qproperty-marginLeft: 13px;
+      qproperty-yMarginLeft: 13px;
       margin-left: 13px;
-      qproperty-marginHorizontal: 14px;
+      qproperty-yMarginHorizontal: 14px;
       margin-right: 14px;
       margin-left: 14px;
-      qproperty-marginVertical: 15px;
+      qproperty-yMarginVertical: 15px;
       margin-bottom: 15px;
       margin-top: 15px;
     `,
@@ -202,18 +202,18 @@ it("padding", function() {
       padding-vertical: 15px;
     `,
     `
-      qproperty-paddingTop: 10px;
+      qproperty-yPaddingTop: 10px;
       padding-top: 10px;
-      qproperty-paddingRight: 11px;
+      qproperty-yPaddingRight: 11px;
       padding-right: 11px;
-      qproperty-paddingBottom: 12px;
+      qproperty-yPaddingBottom: 12px;
       padding-bottom: 12px;
-      qproperty-paddingLeft: 13px;
+      qproperty-yPaddingLeft: 13px;
       padding-left: 13px;
-      qproperty-paddingHorizontal: 14px;
+      qproperty-yPaddingHorizontal: 14px;
       padding-right: 14px;
       padding-left: 14px;
-      qproperty-paddingVertical: 15px;
+      qproperty-yPaddingVertical: 15px;
       padding-bottom: 15px;
       padding-top: 15px;
     `,
@@ -228,9 +228,9 @@ it("position", function() {
       position: 'relative';
     `,
     `
-      qproperty-position: 'absolute';
+      qproperty-yPosition: 'absolute';
       position: 'absolute';
-      qproperty-position: 'relative';
+      qproperty-yPosition: 'relative';
       position: 'relative';
     `,
     {}

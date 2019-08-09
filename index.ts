@@ -17,161 +17,161 @@ export const autoprefixer = postcss.plugin(
 const getAutoPrefixerForProp = (propName: string) => {
   const rules: Rules = {
     display: decl => {
-      decl.prop = "qproperty-display";
+      decl.prop = "qproperty-yDisplay";
     },
     "align-items": decl => {
-      decl.prop = "qproperty-alignItems";
+      decl.prop = "qproperty-yAlignItems";
     },
     "align-content": decl => {
-      decl.prop = "qproperty-alignContent";
+      decl.prop = "qproperty-yAlignContent";
     },
     "align-self": decl => {
-      decl.prop = "qproperty-alignSelf";
+      decl.prop = "qproperty-yAlignSelf";
     },
     "justify-content": decl => {
-      decl.prop = "qproperty-justifyContent";
+      decl.prop = "qproperty-yJustifyContent";
     },
     direction: decl => {
-      decl.prop = "qproperty-direction";
+      decl.prop = "qproperty-yDirection";
     },
     "flex-direction": decl => {
-      decl.prop = "qproperty-flexDirection";
+      decl.prop = "qproperty-yFlexDirection";
     },
     overflow: decl => {
-      decl.prop = "qproperty-overflow";
+      decl.prop = "qproperty-yOverflow";
     },
     position: decl => {
-      decl.cloneBefore({ prop: "qproperty-position" });
+      decl.cloneBefore({ prop: "qproperty-yPosition" });
     },
     "flex-wrap": decl => {
-      decl.prop = "qproperty-flexWrap";
+      decl.prop = "qproperty-yFlexWrap";
     },
     flex: decl => {
-      decl.prop = "qproperty-flex";
+      decl.prop = "qproperty-yFlex";
     },
     "flex-grow": decl => {
-      decl.prop = "qproperty-flexGrow";
+      decl.prop = "qproperty-yFlexGrow";
     },
     "flex-shrink": decl => {
-      decl.prop = "qproperty-flexShrink";
+      decl.prop = "qproperty-yFlexShrink";
     },
     "aspect-ratio": decl => {
-      decl.prop = "qproperty-aspectRatio";
+      decl.prop = "qproperty-yAspectRatio";
     },
     top: decl => {
-      decl.cloneBefore({ prop: "qproperty-top" });
+      decl.cloneBefore({ prop: "qproperty-yTop" });
     },
     right: decl => {
-      decl.cloneBefore({ prop: "qproperty-right" });
+      decl.cloneBefore({ prop: "qproperty-yRight" });
     },
     bottom: decl => {
-      decl.cloneBefore({ prop: "qproperty-bottom" });
+      decl.cloneBefore({ prop: "qproperty-yBottom" });
     },
     left: decl => {
-      decl.cloneBefore({ prop: "qproperty-left" });
+      decl.cloneBefore({ prop: "qproperty-yLeft" });
     },
     "flex-basis": decl => {
-      decl.prop = "qproperty-flexBasis";
+      decl.prop = "qproperty-yFlexBasis";
     },
     "min-width": decl => {
-      decl.cloneBefore({ prop: "qproperty-minWidth" });
+      decl.cloneBefore({ prop: "qproperty-yMinWidth" });
     },
     "min-height": decl => {
-      decl.cloneBefore({ prop: "qproperty-minHeight" });
+      decl.cloneBefore({ prop: "qproperty-yMinHeight" });
     },
     width: decl => {
-      decl.cloneBefore({ prop: "qproperty-qWidth" });
+      decl.cloneBefore({ prop: "qproperty-yWidth" });
     },
     height: decl => {
-      decl.cloneBefore({ prop: "qproperty-qHeight" });
+      decl.cloneBefore({ prop: "qproperty-yHeight" });
     },
     "max-width": decl => {
-      decl.cloneBefore({ prop: "qproperty-maxWidth" });
+      decl.cloneBefore({ prop: "qproperty-yMaxWidth" });
     },
     "max-height": decl => {
-      decl.cloneBefore({ prop: "qproperty-maxHeight" });
+      decl.cloneBefore({ prop: "qproperty-yMaxHeight" });
     },
     "padding-top": decl => {
-      decl.cloneBefore({ prop: "qproperty-paddingTop" });
+      decl.cloneBefore({ prop: "qproperty-yPaddingTop" });
     },
     "padding-right": decl => {
-      decl.cloneBefore({ prop: "qproperty-paddingRight" });
+      decl.cloneBefore({ prop: "qproperty-yPaddingRight" });
     },
     "padding-bottom": decl => {
-      decl.cloneBefore({ prop: "qproperty-paddingBottom" });
+      decl.cloneBefore({ prop: "qproperty-yPaddingBottom" });
     },
     "padding-left": decl => {
-      decl.cloneBefore({ prop: "qproperty-paddingLeft" });
+      decl.cloneBefore({ prop: "qproperty-yPaddingLeft" });
     },
     "padding-horizontal": decl => {
-      decl.cloneBefore({ prop: "qproperty-paddingHorizontal" });
+      decl.cloneBefore({ prop: "qproperty-yPaddingHorizontal" });
       decl.cloneBefore({ prop: "padding-right" });
       decl.cloneBefore({ prop: "padding-left" });
       decl.remove();
     },
     "padding-vertical": decl => {
-      decl.cloneBefore({ prop: "qproperty-paddingVertical" });
+      decl.cloneBefore({ prop: "qproperty-yPaddingVertical" });
       decl.cloneBefore({ prop: "padding-bottom" });
       decl.cloneBefore({ prop: "padding-top" });
       decl.remove();
     },
     padding: decl => {
-      decl.cloneBefore({ prop: "qproperty-padding" });
+      decl.cloneBefore({ prop: "qproperty-yPadding" });
     },
     "margin-top": decl => {
-      decl.cloneBefore({ prop: "qproperty-marginTop" });
+      decl.cloneBefore({ prop: "qproperty-yMarginTop" });
     },
     "margin-right": decl => {
-      decl.cloneBefore({ prop: "qproperty-marginRight" });
+      decl.cloneBefore({ prop: "qproperty-yMarginRight" });
     },
     "margin-bottom": decl => {
-      decl.cloneBefore({ prop: "qproperty-marginBottom" });
+      decl.cloneBefore({ prop: "qproperty-yMarginBottom" });
     },
     "margin-left": decl => {
-      decl.cloneBefore({ prop: "qproperty-marginLeft" });
+      decl.cloneBefore({ prop: "qproperty-yMarginLeft" });
     },
     "margin-horizontal": decl => {
-      decl.cloneBefore({ prop: "qproperty-marginHorizontal" });
+      decl.cloneBefore({ prop: "qproperty-yMarginHorizontal" });
       decl.cloneBefore({ prop: "margin-right" });
       decl.cloneBefore({ prop: "margin-left" });
       decl.remove();
     },
     "margin-vertical": decl => {
-      decl.cloneBefore({ prop: "qproperty-marginVertical" });
+      decl.cloneBefore({ prop: "qproperty-yMarginVertical" });
       decl.cloneBefore({ prop: "margin-bottom" });
       decl.cloneBefore({ prop: "margin-top" });
       decl.remove();
     },
     margin: decl => {
-      decl.cloneBefore({ prop: "qproperty-margin" });
+      decl.cloneBefore({ prop: "qproperty-yMargin" });
     },
     "border-top": decl => {
       decl.cloneBefore({
-        prop: "qproperty-borderTop",
+        prop: "qproperty-yBorderTop",
         value: parseInt(`${decl.value}`)
       });
     },
     "border-right": decl => {
       decl.cloneBefore({
-        prop: "qproperty-borderRight",
+        prop: "qproperty-yBorderRight",
         value: parseInt(`${decl.value}`)
       });
     },
     "border-bottom": decl => {
       decl.cloneBefore({
-        prop: "qproperty-borderBottom",
+        prop: "qproperty-yBorderBottom",
         value: parseInt(`${decl.value}`)
       });
     },
     "border-left": decl => {
       decl.cloneBefore({
-        prop: "qproperty-borderLeft",
+        prop: "qproperty-yBorderLeft",
         value: parseInt(`${decl.value}`)
       });
     },
     "border-horizontal": decl => {
       decl.cloneBefore({
-        prop: "qproperty-borderHorizontal",
+        prop: "qproperty-yBorderHorizontal",
         value: parseInt(`${decl.value}`)
       });
       decl.cloneBefore({ prop: "border-right" });
@@ -180,7 +180,7 @@ const getAutoPrefixerForProp = (propName: string) => {
     },
     "border-vertical": decl => {
       decl.cloneBefore({
-        prop: "qproperty-borderVertical",
+        prop: "qproperty-yBorderVertical",
         value: parseInt(`${decl.value}`)
       });
       decl.cloneBefore({ prop: "border-bottom" });
@@ -189,37 +189,37 @@ const getAutoPrefixerForProp = (propName: string) => {
     },
     border: decl => {
       decl.cloneBefore({
-        prop: "qproperty-border",
+        prop: "qproperty-yBorder",
         value: parseInt(`${decl.value}`)
       });
     },
     "border-top-width": decl => {
       decl.cloneBefore({
-        prop: "qproperty-borderTop",
+        prop: "qproperty-yBorderTop",
         value: parseInt(`${decl.value}`)
       });
     },
     "border-right-width": decl => {
       decl.cloneBefore({
-        prop: "qproperty-borderRight",
+        prop: "qproperty-yBorderRight",
         value: parseInt(`${decl.value}`)
       });
     },
     "border-bottom-width": decl => {
       decl.cloneBefore({
-        prop: "qproperty-borderBottom",
+        prop: "qproperty-yBorderBottom",
         value: parseInt(`${decl.value}`)
       });
     },
     "border-left-width": decl => {
       decl.cloneBefore({
-        prop: "qproperty-borderLeft",
+        prop: "qproperty-yBorderLeft",
         value: parseInt(`${decl.value}`)
       });
     },
     "border-horizontal-width": decl => {
       decl.cloneBefore({
-        prop: "qproperty-borderHorizontal",
+        prop: "qproperty-yBorderHorizontal",
         value: parseInt(`${decl.value}`)
       });
       decl.cloneBefore({ prop: "border-right" });
@@ -228,7 +228,7 @@ const getAutoPrefixerForProp = (propName: string) => {
     },
     "border-vertical-width": decl => {
       decl.cloneBefore({
-        prop: "qproperty-borderVertical",
+        prop: "qproperty-yBorderVertical",
         value: parseInt(`${decl.value}`)
       });
       decl.cloneBefore({ prop: "border-bottom" });
@@ -237,7 +237,7 @@ const getAutoPrefixerForProp = (propName: string) => {
     },
     "border-width": decl => {
       decl.cloneBefore({
-        prop: "qproperty-border",
+        prop: "qproperty-yBorder",
         value: parseInt(`${decl.value}`)
       });
     }
