@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/master-atul/postcss-nodegui-autoprefixer",
   "dependencies": {
-    "postcss": "^7.0.17"
+    "postcss": "^8.1.4"
   },
   "devDependencies": {
     "@types/jest": "^24.0.17",
