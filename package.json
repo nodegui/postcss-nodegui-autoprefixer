@@ -17,7 +17,8 @@
   ],
   "scripts": {
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "author": "Atul R <atulanand94@gmail.com>",
   "license": "MIT",
