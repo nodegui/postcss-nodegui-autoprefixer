@@ -1,22 +1,23 @@
-import postcss from "postcss";
+import type { Declaration } from "postcss";
 
 const noop = () => {};
 
-export const autoprefixer = postcss.plugin(
-  "postcss-nodegui-autoprefixer",
-  () => {
-    return root => {
-      root.walkDecls(decl => {
+const autoprefixer = (opts?: any) => {
+  return {
+    postcssPlugin: 'postcss-nodegui-autoprefixer',
+    Once (root: any) {
+      root.walkDecls((decl: any) => {
         const autoPrefixer = getAutoPrefixerForProp(decl.prop);
         autoPrefixer(decl);
       });
-    };
+    }
   }
-);
+}
+export const postcss = true;
 
 const getAutoPrefixerForProp = (propName: string) => {
   const rules: Rules = {
-    display: decl => {
+      display: decl => {
       decl.prop = "qproperty-yDisplay";
     },
     "align-items": decl => {
@@ -148,31 +149,31 @@ const getAutoPrefixerForProp = (propName: string) => {
     "border-top": decl => {
       decl.cloneBefore({
         prop: "qproperty-yBorderTop",
-        value: parseInt(`${decl.value}`)
+        value: decl.value
       });
     },
     "border-right": decl => {
       decl.cloneBefore({
         prop: "qproperty-yBorderRight",
-        value: parseInt(`${decl.value}`)
+        value: decl.value
       });
     },
     "border-bottom": decl => {
       decl.cloneBefore({
         prop: "qproperty-yBorderBottom",
-        value: parseInt(`${decl.value}`)
+        value: decl.value
       });
     },
     "border-left": decl => {
       decl.cloneBefore({
         prop: "qproperty-yBorderLeft",
-        value: parseInt(`${decl.value}`)
+        value: decl.value
       });
     },
     "border-horizontal": decl => {
       decl.cloneBefore({
         prop: "qproperty-yBorderHorizontal",
-        value: parseInt(`${decl.value}`)
+        value: decl.value
       });
       decl.cloneBefore({ prop: "border-right" });
       decl.cloneBefore({ prop: "border-left" });
@@ -181,7 +182,7 @@ const getAutoPrefixerForProp = (propName: string) => {
     "border-vertical": decl => {
       decl.cloneBefore({
         prop: "qproperty-yBorderVertical",
-        value: parseInt(`${decl.value}`)
+        value: decl.value
       });
       decl.cloneBefore({ prop: "border-bottom" });
       decl.cloneBefore({ prop: "border-top" });
@@ -190,37 +191,37 @@ const getAutoPrefixerForProp = (propName: string) => {
     border: decl => {
       decl.cloneBefore({
         prop: "qproperty-yBorder",
-        value: parseInt(`${decl.value}`)
+        value: decl.value
       });
     },
     "border-top-width": decl => {
       decl.cloneBefore({
         prop: "qproperty-yBorderTop",
-        value: parseInt(`${decl.value}`)
+        value: decl.value
       });
     },
     "border-right-width": decl => {
       decl.cloneBefore({
         prop: "qproperty-yBorderRight",
-        value: parseInt(`${decl.value}`)
+        value: decl.value
       });
     },
     "border-bottom-width": decl => {
       decl.cloneBefore({
         prop: "qproperty-yBorderBottom",
-        value: parseInt(`${decl.value}`)
+        value: decl.value
       });
     },
     "border-left-width": decl => {
       decl.cloneBefore({
         prop: "qproperty-yBorderLeft",
-        value: parseInt(`${decl.value}`)
+        value: decl.value
       });
     },
     "border-horizontal-width": decl => {
       decl.cloneBefore({
         prop: "qproperty-yBorderHorizontal",
-        value: parseInt(`${decl.value}`)
+        value: decl.value
       });
       decl.cloneBefore({ prop: "border-right" });
       decl.cloneBefore({ prop: "border-left" });
@@ -229,7 +230,7 @@ const getAutoPrefixerForProp = (propName: string) => {
     "border-vertical-width": decl => {
       decl.cloneBefore({
         prop: "qproperty-yBorderVertical",
-        value: parseInt(`${decl.value}`)
+        value: decl.value
       });
       decl.cloneBefore({ prop: "border-bottom" });
       decl.cloneBefore({ prop: "border-top" });
@@ -238,7 +239,7 @@ const getAutoPrefixerForProp = (propName: string) => {
     "border-width": decl => {
       decl.cloneBefore({
         prop: "qproperty-yBorder",
-        value: parseInt(`${decl.value}`)
+        value: decl.value
       });
     }
   };
@@ -246,7 +247,7 @@ const getAutoPrefixerForProp = (propName: string) => {
 };
 
 type Rules = {
-  [key: string]: (decl: postcss.Declaration) => void;
+  [key: string]: (decl: Declaration) => void;
 };
 
 export default autoprefixer;
